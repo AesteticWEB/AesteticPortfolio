@@ -286,10 +286,6 @@ export class App implements AfterViewInit, OnDestroy {
     meshC.position.set(0.5, 3.6, -3.5);
     group.add(meshC);
 
-    // ring/knot removed per request
-
-    // light bars removed per request
-
     const particleCount = 180;
     const positions = new Float32Array(particleCount * 3);
     for (let i = 0; i < particleCount; i += 1) {
@@ -353,7 +349,6 @@ export class App implements AfterViewInit, OnDestroy {
 
       sectionGroup.position.y = 8 - this.scroll * 6;
       sectionGroup.rotation.y = this.scroll * 0.8;
-      // light bars removed
       const fade = Math.max(0, Math.min(1, 1 - (this.scroll - 0.35) / 0.25));
       this.sectionMeshes.forEach((mesh, index) => {
         const mat = mesh.material as THREE.MeshStandardMaterial;
